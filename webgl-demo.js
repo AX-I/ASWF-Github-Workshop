@@ -2,9 +2,16 @@ var cubeRotation = 0.0;
 
 main();
 
-//
-// Start here
-//
+// Define Global Variables Here!
+// var catPaw = 'https://i.imgur.com/oPR4BiX.jpg';
+
+
+function requestCORSIfNotSameOrigin(img, url) {
+  if ((new URL(url, window.location.href)).origin !== window.location.origin) {
+    img.crossOrigin = "";
+  }
+}
+
 function main() {
   const canvas = document.querySelector('#glcanvas');
   const gl = canvas.getContext('webgl');
@@ -65,7 +72,13 @@ function main() {
   // objects we'll be drawing.
   const buffers = initBuffers(gl);
 
-  const texture = loadTexture(gl, '../cubetexture.png');
+  const catPaw = 'https://i.imgur.com/oPR4BiX.jpg';
+  const spookedCat = 'https://i.imgur.com/0uKWaVZ.jpeg'
+
+  // Feel free to put a custom image URL here from imgur! (can't be a gif or video, sorry!)
+  const myCustomImage = ''
+
+  const texture = loadTexture(gl, catPaw);
 
   var then = 0;
 
@@ -262,6 +275,8 @@ function loadTexture(gl, url) {
        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     }
   };
+
+  requestCORSIfNotSameOrigin(image, url);
   image.src = url;
 
   return texture;

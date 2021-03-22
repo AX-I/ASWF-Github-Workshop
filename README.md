@@ -6,3 +6,5 @@ https://threejs.org/examples/#webgl_tonemapping
 
 Original Code:
 https://github.com/mrdoob/three.js/blob/master/examples/webgl_materials_standard.html
+
+![Preview of cube](Preview.png)

@@ -2,7 +2,7 @@
 
 
 Tutorial Example Credit:
-https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+https://threejs.org/examples/#webgl_tonemapping
 
 Original Code:
-https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample6
+https://github.com/mrdoob/three.js/blob/master/examples/webgl_materials_standard.html

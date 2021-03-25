@@ -46,7 +46,16 @@ function init() {
 	scene.add( dirLight );
 	scene.add( camera );
 
-	var catTexture = new THREE.TextureLoader().load( 'https://i.imgur.com/oPR4BiX.jpg' );
+	// ********************************************
+	// Feel free to play with code here!
+
+	var pawURL = 'https://i.imgur.com/oPR4BiX.jpg';
+	var spookedCatURL = 'https://i.imgur.com/0uKWaVZ.jpg';
+
+	// Space for your own custom image! You can place a URL of any image you want under the quotes below.
+	var myCustomURL = '';
+
+	var catTexture = new THREE.TextureLoader().load( pawURL );
 	cube = new THREE.Mesh(
 	  new THREE.BoxGeometry(100, 100, 100),
 	  new THREE.MeshStandardMaterial({map: catTexture})
@@ -114,8 +123,6 @@ function onWindowResize() {
 
 function animate() {
 	requestAnimationFrame( animate );
-	cube.rotation.x += 0.01;
-	cube.rotation.y += 0.02;
 
 	renderer.render( scene, camera );
 }

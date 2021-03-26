@@ -55,7 +55,7 @@ function init() {
 	// Space for your own custom image! You can place a URL of any image you want under the quotes below.
 	var myCustomURL = '';
 
-	var catTexture = new THREE.TextureLoader().load( pawURL );
+	var catTexture = new THREE.TextureLoader().load( spookedCatURL );
 	cube = new THREE.Mesh(
 	  new THREE.BoxGeometry(100, 100, 100),
 	  new THREE.MeshStandardMaterial({map: catTexture})

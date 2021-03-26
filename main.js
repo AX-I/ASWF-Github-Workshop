@@ -61,6 +61,8 @@ function init() {
 	  new THREE.MeshStandardMaterial({map: catTexture})
 	)
 	cube.position.y = 50;
+	cube.rotation.x = 40;
+	cube.rotation.y = -20;
 	cube.castShadow = true;
 	scene.add(cube);
 
